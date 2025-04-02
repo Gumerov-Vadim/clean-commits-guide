@@ -9,7 +9,11 @@ yellow_color = "\033[1;33m"
 
 commit_msg_filepath = sys.argv[1]
 
+#регулярное выражение с поддержкой многострочных коммитов
+#regex = r"^(feat|fix|refactor|docs|test|chore|style|revert)(\(.+\))?: .+(\n)(\n+.*)*$"
+
 regex = r"^(feat|fix|refactor|docs|test|chore|style|revert)(\(.+\))?: .+$"
+
 error_msg = "Commit message format must match regex " + regex
 
 with open(commit_msg_filepath, "r+") as file:
