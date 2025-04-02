@@ -19,5 +19,5 @@ with open(commit_msg_filepath, "r+") as file:
     else:
         print(red_color + "Bad commit " + blue_color + commit_msg)
         print(yellow_color + error_msg)
-        print("commit-msg hook failed (add --no-verify to bypass)")
+        print("commit-msg hook failed (add --no-verify to bypass)" + color_off)
         sys.exit(1)
